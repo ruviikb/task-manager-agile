@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow - Gerenciamento de Tarefas</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div><span class="eyebrow">TECHFLOW SOLUTIONS</span><h1>TaskFlow</h1></div>
+      <p>Organize, priorize e acompanhe as tarefas da equipe.</p>
+    </header>
+
+    <section class="panel">
+      <h2>Nova tarefa</h2>
+      <form id="task-form">
+        <input id="title" placeholder="Título da tarefa" minlength="3" required>
+        <input id="description" placeholder="Descrição">
+        <select id="priority">
+          <option value="baixa">Baixa prioridade</option>
+          <option value="media" selected>Média prioridade</option>
+          <option value="alta">Alta prioridade</option>
+        </select>
+        <button type="submit">Adicionar tarefa</button>
+      </form>
+      <p id="message" role="status"></p>
+    </section>
+
+    <section>
+      <div class="list-heading"><h2>Tarefas</h2><span id="counter">0 tarefas</span></div>
+      <div id="tasks" class="tasks"></div>
+    </section>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
