@@ -1,0 +1,16 @@
+{
+  "name": "task-manager-agile",
+  "version": "1.0.0",
+  "description": "Sistema web básico de gerenciamento de tarefas desenvolvido para um projeto de Engenharia de Software.",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test",
+    "quality": "node --check src/app.js && node --check src/server.js"
+  },
+  "keywords": ["node", "kanban", "engenharia-de-software"],
+  "author": "Bismarck Berrondo",
+  "license": "MIT",
+  "engines": {"node": ">=20"}
+}
