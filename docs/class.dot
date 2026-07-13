@@ -1,0 +1,7 @@
+digraph Classes {
+  graph [rankdir=TB, bgcolor="white", pad=0.3, nodesep=0.8, ranksep=0.8, fontname="Arial"];
+  node [shape=record, fontname="Arial", color="#405a84", style="rounded"];
+  Task [label="{Task|+ id: number\l+ title: string\l+ description: string\l+ priority: string\l+ completed: boolean\l+ createdAt: string\l}"];
+  TaskService [label="{TaskService|- tasks: Task[]\l- nextId: number\l|+ list(): Task[]\l+ findById(id): Task\l+ create(data): Task\l+ update(id, data): Task\l+ remove(id): Task\l}"];
+  TaskService -> Task [label="gerencia 0..*", arrowhead=diamond];
+}

@@ -1,0 +1,20 @@
+digraph UseCase {
+  graph [rankdir=LR, bgcolor="white", pad=0.3, nodesep=0.7, ranksep=1.0, fontname="Arial"];
+  node [fontname="Arial"];
+  user [label="Usuário da equipe", shape=plaintext];
+  subgraph cluster_system {
+    label="TaskFlow";
+    color="#5b78a8";
+    style="rounded";
+    create [label="Cadastrar tarefa", shape=ellipse];
+    list [label="Listar tarefas", shape=ellipse];
+    update [label="Atualizar status", shape=ellipse];
+    remove [label="Excluir tarefa", shape=ellipse];
+    priority [label="Definir prioridade", shape=ellipse];
+  }
+  user -> create [dir=none];
+  user -> list [dir=none];
+  user -> update [dir=none];
+  user -> remove [dir=none];
+  user -> priority [dir=none];
+}
